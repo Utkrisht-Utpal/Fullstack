@@ -1,0 +1,95 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Background */
+body {
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+/* Glass container */
+.main-box {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    padding: 25px;
+    min-width: 320px;
+
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    color: white;
+}
+
+/* Balance section */
+#account {
+    height: auto;
+    text-align: center;
+}
+
+#account h2 {
+    font-weight: 600;
+}
+
+/* Input */
+.input-box {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#amount {
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+
+    background: rgba(255, 255, 255, 0.25);
+    color: white;
+}
+
+#amount::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Buttons */
+button {
+    padding: 10px;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+
+    background: rgba(255, 255, 255, 0.25);
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.45);
+}
+
+/* Accent colors */
+#dep {
+    box-shadow: inset 0 0 0 1px rgba(28, 252, 20, 0.6);
+}
+
+#with {
+    box-shadow: inset 0 0 0 1px rgba(236, 55, 49, 0.6);
+}

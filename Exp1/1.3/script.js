@@ -1,8 +1,12 @@
 const toggleBtn = document.getElementById("themeToggle");
+const deposit = document.querySelector("#dep");
+const withdraw = document.querySelector("#with");
+const amount = document.querySelector("#amount");
+const balance = document.querySelector("#balance");
 
 if (localStorage.getItem("theme") === "light"){
     document.body.classList.add("light");
-    toggleBtn.textContent = "🌙 Dark Mode"
+    toggleBtn.textContent = "🌙 Dark Mode";
 }
 
 toggleBtn.addEventListener("click", () => {
@@ -13,4 +17,34 @@ toggleBtn.addEventListener("click", () => {
     toggleBtn.textContent = isLight ? "🌙 Dark Mode" : "☀️ Light Mode";
 
     localStorage.setItem("theme", isLight ? "light" : "dark");
-})
+});
+
+let savings = Number(localStorage.getItem("savings")) || 0;
+function displayBalance () {balance.innerText = `Balance: $${savings}`}
+displayBalance();
+
+deposit.addEventListener('click', () => {
+    const fees = Number(amount.value);
+
+    if (isNaN(fees) || fees <= 0) {
+        alert("Invalid amount");
+        return;
+    }
+
+    savings += fees;
+    displayBalance();
+    localStorage.setItem("savings", savings);
+});
+
+withdraw.addEventListener('click', () => {
+    const fees = Number(amount.value);
+
+    if (fees <= 0) {
+        console.log("Invalid amount");
+        return;
+    }
+
+    savings -= fees;
+    displayBalance();
+    localStorage.setItem("savings", savings);
+});

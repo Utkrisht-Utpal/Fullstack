@@ -92,7 +92,7 @@ button:active {
     background-color: var(--bg-card);
     border-radius: 12px;
     border: 1px solid var(--border-card);
-    height: calc(100dvh - 56px - 48px);
+    height: calc(100vh - 56px - 48px);
     box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.03);
 }
 
@@ -125,4 +125,62 @@ button:active {
     .right {
         grid-template-columns: 1fr;
     }
+}
+
+/* Balance section */
+#account {
+    height: 34px;
+    text-align: center;
+}
+
+#balance {
+    margin: 5px;
+}
+
+/* Input */
+.input-box {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#amount {
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+
+    background: rgba(255, 255, 255, 0.25);
+    color: white;
+}
+
+#amount::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Buttons */
+button {
+    padding: 10px;
+    color: var(--btn-text);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+
+    background: rgba(255, 255, 255, 0.25);
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.45);
+}
+
+/* Accent colors */
+#dep {
+    margin-top: 15px;
+    box-shadow: inset 0 0 0 1px rgba(28, 252, 20, 0.6);
+}
+
+#with {
+    margin-top: 15px;
+    box-shadow: inset 0 0 0 1px rgba(236, 55, 49, 0.6);
 }

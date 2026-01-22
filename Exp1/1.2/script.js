@@ -3,7 +3,7 @@ const withdraw = document.querySelector("#with");
 const amount = document.querySelector("#amount");
 const balance = document.querySelector("#balance");
 
-let savings = 0;
+let savings = Number(localStorage.getItem("savings")) || 0;
 function displayBalance () {balance.innerText = `Balance: $${savings}`}
 displayBalance();
 
@@ -17,6 +17,7 @@ deposit.addEventListener('click', () => {
 
     savings += fees;
     displayBalance();
+    localStorage.setItem("savings", savings);
 });
 
 withdraw.addEventListener('click', () => {
@@ -30,4 +31,5 @@ withdraw.addEventListener('click', () => {
     savings -= fees;
     console.log(savings);
     displayBalance();
+    localStorage.setItem("savings", savings);
 });

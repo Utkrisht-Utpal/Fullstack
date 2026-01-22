@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
+
 <body>
     <nav>
         <h2>Admin Dashboard</h2>
@@ -19,7 +21,21 @@
             <div>Analytics</div>
             <div>Users</div>
             <div>Settings</div>
+            <div class="main-bank">
+                <div id="account">
+                    <h2 id="balance"></h2>
+                </div>
+                <div class="input-box">
+                    Amount:
+                    <input type="number" name="amount" id="amount" title="Enter an amount...">
+                </div>
+                <operations>
+                    <button id="dep">Deposit</button>
+                    <button id="with">Withdraw</button>
+                </operations>
+            </div>
         </div>
     </div>
 </body>
+
 </html>
